@@ -4,7 +4,7 @@ const schema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
   },
   user: {
     ref: "User",

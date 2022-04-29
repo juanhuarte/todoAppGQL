@@ -18,9 +18,14 @@ const server = new ApolloServer({
     if (auth && auth.toLowerCase().startsWith("bearer ")) {
       const token = auth.substring(7);
       const decodedToken = jwt.verify(token, JWT_SECRET);
-      const currentUser = await User.findById(decodedToken.id).populate(
-        "folders"
-      ); // con el populate lo que hace es teniendo el usuario y a buscar a sus amigos
+      const currentUser = await User.findById(decodedToken.id).populate({
+        path: "folders",
+        model: "Folder",
+        populate: {
+          path: "items",
+          model: "Item",
+        },
+      }); // con el populate lo que hace es teniendo el usuario y a buscar a sus carpetas
       return { currentUser };
     }
   },

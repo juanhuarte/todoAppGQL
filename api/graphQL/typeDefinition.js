@@ -6,13 +6,13 @@ export const typeDefinitions = gql`
     lastname: String!
     mail: String!
     password: String!
-    folders: [Folder]!
+    folders: [Folder]
     id: ID!
   }
 
   type Folder {
     name: String!
-    items: [Item]!
+    items: [Item]
     id: ID!
   }
 
@@ -28,7 +28,7 @@ export const typeDefinitions = gql`
 
   type Query {
     getFolders: User
-    getItems(name: String!): Folder
+    getItems(id: ID!): Folder
   }
 
   type Mutation {
@@ -41,8 +41,8 @@ export const typeDefinitions = gql`
     login(mail: String!, password: String!): Token
     createFolder(name: String!): User
     deleteFolder(name: String!): User
-    createItem(name: String!, description: String!, status: Boolean!): Folder
-    deleteItem(name: String!, description: String!): Folder
-    updateItem(name: String!, description: String!, status: Boolean!): Item
+    createItem(id: ID!, description: String!, status: Boolean!): Folder
+    deleteItem(id: ID!, description: String!): Folder
+    updateItem(id: ID!, description: String!, status: Boolean!): Item
   }
 `;
