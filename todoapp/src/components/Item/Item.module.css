@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
+
+.text {
+  color: var(--primary-font-color);
+  display: flex;
+  align-items: flex-start;
+  margin-left: 2vw;
+  width: 12vw;
+  font-size: 14px;
+  text-align: start;
+}
+
+.button {
+  border-width: 0px;
+  background-color: transparent;
+  color: var(--primary-btn-color);
+  margin-top: 1vh;
+  cursor: pointer;
+  margin-left: 1vw;
+  font-size: 1vw;
+}
+
+.checkbox {
+  justify-items: flex-start;
+  margin-top: 2.5vh;
+  cursor: pointer;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 6.5vw;
+}
+
+.input {
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: var(--primary-font-color);
+  width: 15vw;
+  height: 3vh;
+  margin-left: 6vw;
+  margin-top: 4vh;
+  padding-left: 0.8vw;
+  border-color: black;
+  background-color: var(--primary-font-color);
+}
+
+.btn {
+  border-width: 2px;
+  border-radius: 10px;
+  width: 6vw;
+  height: 4vh;
+  margin-left: 1vw;
+  margin-top: 4vh;
+  cursor: pointer;
+  background-color: var(--primary-button-color);
+  color: var(--primary-font-color);
+  border-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+}
+
+.btn:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-button-color);
+  border-color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    margin-left: 5vw;
+    font-size: 2vw;
+  }
+  .items {
+    align-items: center;
+    justify-content: center;
+  }
+  .title {
+    margin-left: 6vw;
+    margin-top: -0.5vh;
+  }
+  .editForm {
+    margin-top: -4vh;
+    margin-bottom: 2vh;
+  }
+  .input {
+    width: 20vw;
+  }
+  .btn {
+    width: 8vw;
+    margin-left: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .input {
+    width: 25vw;
+  }
+  .btn {
+    width: 10vw;
+    font-size: 2vw;
+  }
+  .title {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    font-size: 2.5vw;
+  }
+  .button {
+    font-size: 2.5vw;
+  }
+  .container {
+    margin-left: 0vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .input {
+    width: 35vw;
+    height: 2.5vh;
+  }
+  .btn {
+    width: 12vw;
+    height: 3vh;
+    font-size: 2.5vw;
+    margin-left: 3.5vw;
+  }
+  .title {
+    font-size: 3.5vw;
+  }
+}

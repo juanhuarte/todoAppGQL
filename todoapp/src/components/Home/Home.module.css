@@ -1,0 +1,136 @@
+.createbg {
+  background-image: url(../../Images/todoBackg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  overflow-y: hidden;
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+}
+
+.bkg {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  width: 60vw;
+  height: 80vh;
+  position: absolute;
+  margin: 0vh 20vw;
+  overflow: hidden;
+  top: 0;
+  border-radius: 1.5rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--primary-font-color);
+  border-radius: 1rem;
+  background-color: rgba(102, 98, 98, 0.7);
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: repeat(2, 30vw);
+}
+
+.folders {
+  grid-column: 1/2;
+}
+
+.input {
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: var(--primary-font-color);
+  width: 15vw;
+  height: 3vh;
+  margin-left: 2vw;
+  margin-top: 4vh;
+  padding-left: 0.8vw;
+  border-color: black;
+  background-color: var(--primary-font-color);
+}
+
+.btn {
+  border-width: 2px;
+  border-radius: 10px;
+  width: 6vw;
+  height: 3.7vh;
+  margin-left: 1vw;
+  margin-top: 4vh;
+  cursor: pointer;
+  background-color: var(--primary-button-color);
+  color: var(--primary-font-color);
+  border-color: black;
+}
+
+.btn:hover {
+  background-color: var(--primary-font-color);
+  color: var(--primary-button-color);
+  border-color: black;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  border-style: none;
+  border-radius: 0.5rem;
+  width: 28vw;
+  height: 55vh;
+  overflow-y: scroll;
+}
+
+.items {
+  grid-column: 2/3;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  backdrop-filter: blur(8px);
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar-color);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-rows: repeat(2, 42.5vh);
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 75vw;
+    margin: 0vh 13vw;
+    grid-template-columns: repeat(2, 37.5vw);
+  }
+}
