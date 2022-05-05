@@ -26,7 +26,7 @@ To make this application, I use differents technologies:
 
 
 
-# How it's work?
+# How it works?
 
 The back-end is deployed with Heroku in the following link: https://todoappgraph.herokuapp.com/
 
