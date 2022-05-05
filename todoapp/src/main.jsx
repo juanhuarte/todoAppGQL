@@ -22,7 +22,8 @@ const client = new ApolloClient({
     headers: {
       authorization: getAuth(),
     },
-    uri: "http://localhost:4000",
+    // uri: "http://localhost:4000",
+    uri: "https://todoappgraph.herokuapp.com/",
   }),
 });
 
